@@ -1,0 +1,56 @@
+        #maindiv {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-top: 3rem;
+            justify-content: center;
+        }
+
+      
+
+        input {
+            text-align: center;
+            line-height: 2.5rem;
+            width: 15.1rem;
+        }
+
+        .LogIn {
+            text-align: center;
+            /*            border: solid;
+        */ box-shadow: 0 30px 50px 0 rgba(0,0,0,.2);
+            align-items: center;
+            padding: 5rem;
+            border-radius: 37px;
+        }
+
+        #LButton {
+            height: 2.5rem;
+            width: 15.1rem;
+            border-radius: 11px;
+            color: white;
+            background-color: cornflowerblue;
+            border: none;
+            cursor: pointer;
+        }
+
+        #RButton {
+            height: 2.5rem;
+            width: 15.1rem;
+            border-radius: 11px;
+            color: white;
+            background-color: lightgreen;
+            border: none;
+            cursor: pointer;
+        }
+
+        .LButton:hover {
+            background-color: black;
+        }
+
+        .RButton:hover {
+            background-color: black;
+        }
+
+        p {
+            padding-left: 77px;
+        }

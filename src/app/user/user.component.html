@@ -1,0 +1,40 @@
+<div class="container">
+  <h2 class="text-center my-4">User Management</h2>
+
+  <form (ngSubmit)="addUser()" class="mb-4">
+    <div class="form-group">
+      <input [(ngModel)]="newUser.name" name="name" class="form-control mb-2" placeholder="Name" required>
+    </div>
+    <div class="form-group">
+      <input [(ngModel)]="newUser.email" name="email" class="form-control mb-2" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+      <input [(ngModel)]="newUser.age" name="age" type="number" class="form-control mb-2" placeholder="Age" required>
+    </div>
+    <button type="submit" class="btn btn-primary">{{ editMode ? 'Update User' : 'Add User' }}</button>
+  </form>
+
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>custome pipe</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index" [ngClass]="{'alt-row': i % 2 === 0}">
+        <td>{{ user.name | uppercase }}</td>
+        <td>{{ user.name | custom }}</td>
+        <td>{{ user.email | lowercase }}</td>
+        <td>{{ user.age | number }}</td>
+        <td>
+          <button class="btn btn-warning btn-sm mr-2" (click)="editUser(user)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
